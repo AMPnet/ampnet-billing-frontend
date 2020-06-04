@@ -11,6 +11,7 @@
     border-top-left-radius: 30px;
     height: 100%;
     padding: 50px;
-    box-shadow: var(--content-box-shadow)
-
+    width: 100%;
+    box-shadow: var(--content-box-shadow);
+    position: fixed;
 }

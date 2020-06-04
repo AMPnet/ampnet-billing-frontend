@@ -13,6 +13,12 @@
     height: 100vh;
 }
 
+@media(max-width: 500px) {
+    #sidebar {
+        width: var(--sidebar-small-width);
+    }
+}
+
 #logo-holder img {
     object-fit: contain;
     width: calc(100% - 35px);
@@ -34,7 +40,6 @@
 .item-holder-list li fa-icon:hover {
     color: var(--accent-color);
     cursor: pointer;
-
 }
 
 

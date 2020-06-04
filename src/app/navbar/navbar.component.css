@@ -6,3 +6,23 @@
 #user-profile-navbar {
     margin-top: var(--app-margin-2);
 }
+
+#notifications-icon-holder {
+    margin-right: var(--app-margin-2);
+    cursor: pointer;
+}
+
+#notifications-icon-holder:hover {
+    color: var(--accent-dark-color)
+}
+
+#name-holder {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#name-holder:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}

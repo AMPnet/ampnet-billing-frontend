@@ -1,13 +1,13 @@
 <div id="navbar">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div id="user-profile-navbar" class="float-right">
-                    <span>{{vm.userFirstName}} {{vm.userLastName}}</span>
-                </div>
-            </div>
+        <div id="user-profile-navbar" class="float-right">
+            <span id="notifications-icon-holder">
+                <fa-icon [icon]='["fad", "bell"]'></fa-icon>
+            </span>
+
+            <span id="name-holder">{{vm.userFirstName}} {{vm.userLastName}}</span>
+            
         </div>
-        
     </div>
     
 </div>
