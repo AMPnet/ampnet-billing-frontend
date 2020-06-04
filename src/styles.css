@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+    /* Colors */
+    --main-bg-color: #fcfcfc;
+    --dark-text-color: #222;
+    --side-nav-bg-color: #fff;
+
+    /* Dimensions */
+    --sidebar-width: 100px;
+    --logo-height: 35px;
+
+    /* Margins and padding */
+    --logo-top-margin: 75px;
+    --logo-left-margin: 20px;
+
+    /* Shadows */
+    --content-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
 * {
     font-family: sans-serif;
 }
@@ -7,4 +25,5 @@
 body {
     margin: 0;
     padding: 0;
+    background: var(--side-nav-bg-color);
 }

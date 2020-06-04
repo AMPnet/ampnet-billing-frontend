@@ -5,3 +5,12 @@
 #root-content {
     width: 100%;
 }
+
+#content-holder {
+    background: var(--main-bg-color);
+    border-top-left-radius: 30px;
+    height: 100%;
+    padding: 50px;
+    box-shadow: var(--content-box-shadow)
+
+}
