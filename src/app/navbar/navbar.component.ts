@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarViewModel } from './navbar.viewmodel';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  vm: NavbarViewModel
+
+  constructor() { 
+    this.vm = {
+      userFirstName: "Johnny",
+      userLastName: "Cruise"
+    }
+  }
 
   ngOnInit(): void {
   }

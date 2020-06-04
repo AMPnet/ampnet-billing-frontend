@@ -1,0 +1,5 @@
+#add-billing-button {
+    padding: var(--app-padding-2);
+    padding-left: var(--app-padding-5)!important;
+    padding-right: var(--app-padding-5)!important;
+}

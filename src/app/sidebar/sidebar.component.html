@@ -2,9 +2,18 @@
     <div id="logo-holder">
         <img src="../../assets/ampnet-logo-notext.svg" alt="">
     </div>
-    <ul class=" list-unstyled">
-        <li>
-            <fa-icon class="width: 100%" icon="coffee"></fa-icon>
+    <ul *ngFor="let section of sidebar" class="list-unstyled item-holder-list">
+        <div class="section-title">{{section.sectionTitle}}</div>
+        <li *ngFor="let item of section.section"
+            >
+            <fa-icon [icon]="['fad', item.iconName]" 
+                data-toggle="tooltip" 
+                data-placement="right"
+                routerLink="{{item.route}}" 
+                (click)="sidebarClicked()"
+                routerLinkActive="activated"
+                title="{{item.title}}"></fa-icon>
         </li>
+        <hr>
     </ul>
 </nav>

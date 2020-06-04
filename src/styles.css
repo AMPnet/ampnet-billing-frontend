@@ -1,29 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
 
 :root {
     /* Colors */
     --main-bg-color: #f9fbff;
     --dark-text-color: #222;
     --side-nav-bg-color: #fff;
+    --icon-dark-color: #666;
+    --accent-color: #239117;
+    --accent-dark-color: #165e0e;
+    --light-text-color: #fff;
 
     /* Dimensions */
     --sidebar-width: 100px;
     --logo-height: 35px;
+    --navbar-height: 60px;
 
     /* Margins and padding */
-    --logo-top-margin: 75px;
+    --logo-top-margin: 20px;
     --logo-left-margin: 20px;
+    --app-margin-1: 8px;
+    --app-margin-2: 16px;
+    --app-margin-3: 24px;
+    --app-margin-4: 32px;
+    --app-margin-5: 40px;
+    --app-margin-6: 48px;
+
+    --app-padding-1: 8px;
+    --app-padding-2: 16px;
+    --app-padding-3: 24px;
+    --app-padding-4: 32px;
+    --app-padding-5: 40px;
 
     /* Shadows */
     --content-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+
+    /* Sizes */
+    --icon-size-standard: 20px;
+    --font-size-small: 12px;
 }
 
+/* Bootstrap overrides */
+.bs-tooltip-right  { 
+    margin-left: 15px!important;
+ }
+
+/* The default Bootstrap tooltip was too close to the icons when showing. This sets the color of the tooltip to the color of the
+app and makes the tooltip bigger and more distant from the icon */
+.tooltip-inner {
+     padding: 15px!important;
+     background: var(--accent-color)!important;
+     color: var(--light-text-color)!important;
+ }
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: var(--accent-color) !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: var(--accent-color) !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: var(--accent-color) !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: var(--accent-color) !important;
+}
+
+.mb-3 {
+    margin-bottom: var(--app-margin-3)!important;
+}
+
+.btn-primary {
+    background: var(--accent-color)!important;
+    color: var(--light-text-color)!important;
+    border: none!important;
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark-color)!important;
+}
+/* ------------------ */
+
 * {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     background: var(--side-nav-bg-color);
+}
+
+.activated {
+    color: var(--accent-color);
 }

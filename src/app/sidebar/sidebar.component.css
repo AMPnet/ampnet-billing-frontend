@@ -15,8 +15,33 @@
 
 #logo-holder img {
     object-fit: contain;
-    width: calc(100% - 40px);
+    width: calc(100% - 35px);
     height: var(--logo-height);
     margin-top: var(--logo-top-margin);
     margin-left: var(--logo-left-margin);
+    margin-bottom: var(--app-margin-6)!important;
+
+}
+
+.item-holder-list li {
+    text-align: center;
+    margin-top: var(--app-margin-3);
+    color: var(--icon-dark-color);
+    font-size: var(--icon-size-standard);
+    transition: all 0.2s;
+}
+
+.item-holder-list li fa-icon:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+
+}
+
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--font-size-small);
+    font-weight: bold;
 }
