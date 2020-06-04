@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fad } from '@fortawesome/pro-duotone-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 @NgModule({
   declarations: [
@@ -23,4 +25,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, fad)
+  }
+
+}
