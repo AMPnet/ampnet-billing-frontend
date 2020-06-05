@@ -1,18 +1,29 @@
-<nav id="sidebar">
+<nav id="sidebar" [class.sidebar-collapsed]="isCollapsed">
     <div id="logo-holder">
         <img src="../../assets/ampnet-logo-notext.svg" alt="">
     </div>
-    <ul *ngFor="let section of sidebar" class="list-unstyled item-holder-list">
+    <ul *ngFor="let section of sidebar; let i = index" class="list-unstyled item-holder-list">
+        <li *ngIf="i == 0">
+            <span class="sidebar-icon-holder">
+                <fa-icon (click)="toggleSidebarClicked()" [icon]="['fad', 'bars']"></fa-icon>
+            </span>
+        </li>
         <div class="section-title">{{section.sectionTitle}}</div>
         <li *ngFor="let item of section.section"
             >
-            <fa-icon [icon]="['fad', item.iconName]" 
+            <span class="card-title sidebar-item-label">
+                {{item.title}}
+            </span>
+            <span class="sidebar-icon-holder">
+                <fa-icon [icon]="['fad', item.iconName]" 
                 data-toggle="tooltip" 
                 data-placement="right"
                 routerLink="{{item.route}}" 
                 (click)="sidebarClicked()"
                 routerLinkActive="activated"
                 title="{{item.title}}"></fa-icon>
+            </span>
+            
         </li>
         <hr>
     </ul>

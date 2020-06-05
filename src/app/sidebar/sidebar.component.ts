@@ -11,11 +11,13 @@ declare var $: any;
 export class SidebarComponent implements OnInit {
 
   sidebar: SidebarModel[]
+  isCollapsed: boolean = true;
 
   constructor() {
     this.sidebar = [
       this.consumptionSection(),
-      this.userManagementSection()
+      this.userManagementSection(),
+      this.logoutSection()
     ]
   }
 
@@ -34,9 +36,9 @@ export class SidebarComponent implements OnInit {
           route: "dash"
         },
         {
-          title: "Consumption & Production",
+          title: "Electric flow",
           iconName: "plug",
-          route: "consumption"
+          route: "stats"
         }
       ]
     }
@@ -64,11 +66,31 @@ export class SidebarComponent implements OnInit {
       ]
     }
   }
+
+  logoutSection(): SidebarModel {
+    return {
+      sectionTitle: "",
+      section: [
+        {
+          title: "Log Out",
+          iconName: "sign-out",
+          route: "logout"
+        }
+      ]
+    }
+  }
   // =============================================================
+
+
+  
 
   // Events
   sidebarClicked() {
     $('[data-toggle="tooltip"]').tooltip('hide')
+  }
+
+  toggleSidebarClicked() {
+    this.isCollapsed = !this.isCollapsed;
   }
   // =============================================================
 

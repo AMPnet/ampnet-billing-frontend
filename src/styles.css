@@ -13,14 +13,19 @@
     --light-text-color: #fff;
 
     /* Dimensions */
-    --sidebar-width: 100px;
-    --sidebar-small-width: 50px;
+
+    /* Sidebar */
+    --sidebar-width: 300px;
+    --sidebar-small-width: 65px;
+
+
     --logo-height: 35px;
     --navbar-height: 60px;
 
     /* Margins and padding */
     --logo-top-margin: 20px;
     --logo-left-margin: 20px;
+    --logo-right-margin: 15px;
     --app-margin-1: 8px;
     --app-margin-2: 16px;
     --app-margin-3: 24px;
@@ -40,6 +45,12 @@
     /* Sizes */
     --icon-size-standard: 20px;
     --font-size-small: 12px;
+
+    /* Spacing */
+    --letter-spacing-std: 0.9px;
+
+    /* Responsive */
+    --small-screen: 760px;
 }
 
 /* Bootstrap overrides */
@@ -80,6 +91,28 @@ app and makes the tooltip bigger and more distant from the icon */
 .btn-primary:hover {
     background: var(--accent-dark-color)!important;
 }
+
+/* Card */
+.card {
+    border: none!important;
+    box-shadow: var(--content-box-shadow)!important;
+}
+
+.card-header {
+    background: var(--main-bg-color)!important;
+    border-bottom: none!important;
+
+}
+
+.card-title {
+    font-size: var(--font-size-small)!important;
+    font-weight: bold!important;
+    color: var(--dark-text-color)!important;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-std)!important;
+    margin: 0!important;
+}
+
 /* ------------------ */
 
 * {
@@ -97,7 +130,3 @@ body {
     color: var(--accent-color);
 }
 
-.basic-card {
-    border: none;
-    
-}

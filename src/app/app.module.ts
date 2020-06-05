@@ -13,7 +13,8 @@ import { BillingComponent } from './billing/billing.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NewBillingMethodComponent } from './billing/new-billing-method/new-billing-method.component';
 import { SecureLayoutComponent } from './secure-layout/secure-layout.component';
-import { PublicLayoutComponent } from './public-layout/public-layout.component'
+import { PublicLayoutComponent } from './public-layout/public-layout.component';
+import { ElectricityStatsComponent } from './electricity-stats/electricity-stats.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PublicLayoutComponent } from './public-layout/public-layout.component'
     UserProfileComponent,
     NewBillingMethodComponent,
     SecureLayoutComponent,
-    PublicLayoutComponent
+    PublicLayoutComponent,
+    ElectricityStatsComponent
   ],
   imports: [
     BrowserModule,
