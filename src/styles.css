@@ -15,7 +15,7 @@
     /* Dimensions */
 
     /* Sidebar */
-    --sidebar-width: 300px;
+    --sidebar-width: 230px;
     --sidebar-small-width: 65px;
 
 
@@ -51,6 +51,12 @@
 
     /* Responsive */
     --small-screen: 760px;
+}
+
+@media(max-width: 760px) {
+    :root {
+        --sidebar-small-width: 45px!important;
+    }
 }
 
 /* Bootstrap overrides */
@@ -96,6 +102,7 @@ app and makes the tooltip bigger and more distant from the icon */
 .card {
     border: none!important;
     box-shadow: var(--content-box-shadow)!important;
+    margin-top: var(--app-margin-2);
 }
 
 .card-header {
@@ -111,6 +118,12 @@ app and makes the tooltip bigger and more distant from the icon */
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-std)!important;
     margin: 0!important;
+}
+
+@media(max-width: var(--small-screen)) {
+    .container {
+        padding: 0px!important;
+    }
 }
 
 /* ------------------ */

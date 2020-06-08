@@ -30,16 +30,9 @@ export class SidebarComponent implements OnInit {
     return {
       sectionTitle: "",
       section: [
-        {
-          title: "Dashboard",
-          iconName: "house",
-          route: "dash"
-        },
-        {
-          title: "Electric flow",
-          iconName: "plug",
-          route: "stats"
-        }
+        { title: "Dashboard", iconName: "house", route: "dash" },
+        { title: "Electric flow", iconName: "plug", route: "stats" }, 
+        { title: "My devices", iconName: "outlet", route: "my_devices" }
       ]
     }
   }
@@ -50,18 +43,18 @@ export class SidebarComponent implements OnInit {
       section: [
         {
           title: "User profile",
-          iconName: "user",
+          iconName: "user-cog",
           route: "user_profile"
+        },
+        {
+          title: "Wallet",
+          iconName: "wallet",
+          route: "wallet"
         },
         {
           title: "Billing",
           iconName: "credit-card",
           route: "billing"
-        }, 
-        {
-          title: "Consumption",
-          iconName: "chart-area",
-          route: "consumption"
         }
       ]
     }

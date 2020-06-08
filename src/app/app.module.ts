@@ -14,7 +14,11 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NewBillingMethodComponent } from './billing/new-billing-method/new-billing-method.component';
 import { SecureLayoutComponent } from './secure-layout/secure-layout.component';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
-import { ElectricityStatsComponent } from './electricity-stats/electricity-stats.component'
+import { ElectricityStatsComponent } from './electricity-stats/electricity-stats.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { WalletComponent } from './wallet/wallet.component'
 
 @NgModule({
   declarations: [
@@ -27,12 +31,15 @@ import { ElectricityStatsComponent } from './electricity-stats/electricity-stats
     NewBillingMethodComponent,
     SecureLayoutComponent,
     PublicLayoutComponent,
-    ElectricityStatsComponent
+    ElectricityStatsComponent,
+    NotificationsComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

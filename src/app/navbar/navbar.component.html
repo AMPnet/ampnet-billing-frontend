@@ -1,8 +1,8 @@
-<div id="navbar">
+<div id="navbar" class="fixed-top">
     <div class="container">
         <div id="user-profile-navbar" class="float-right">
             <span id="notifications-icon-holder">
-                <fa-icon [icon]='["fad", "bell"]'></fa-icon>
+                <fa-icon (click)="notificationsIconClicked()" [icon]='["fad", "bell"]'></fa-icon>
             </span>
 
             <span id="name-holder">{{vm.userFirstName}} {{vm.userLastName}}</span>

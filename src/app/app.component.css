@@ -9,8 +9,20 @@
 #content-holder {
     background: var(--main-bg-color);
     border-top-left-radius: 30px;
-    height: 100%;
-    padding: 50px;
+    border-top-right-radius: 30px;
+    height: calc(100% - var(--navbar-height));
     width: 100%;
+    padding-top: 50px;
     box-shadow: var(--content-box-shadow);
+    margin-top: var(--navbar-height);
+}
+
+@media(min-width: var(--small-screen)) {
+    #content-holder {
+        padding: 50px;
+    }
+}
+
+#notifications-holder {
+    overflow: hidden;
 }

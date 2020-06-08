@@ -1,0 +1,13 @@
+#notifications {
+    width: var(--sidebar-width);
+    margin-top: calc(var(--navbar-height) + var(--app-margin-5));
+    margin-left: var(--app-margin-3);
+    margin-right: var(--app-margin-6);
+    font-size: var(--font-size-small);
+    position: sticky;
+    top: var(--navbar-height);
+}
+
+.notifications-collapsed {
+    margin-right: -400px!important;
+}

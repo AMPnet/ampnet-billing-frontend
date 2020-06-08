@@ -11,6 +11,8 @@
     transition: all 0.3s;
     width: var(--sidebar-width);
     height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .sidebar-collapsed {
@@ -24,6 +26,7 @@
     margin-right: var(--logo-right-margin);
 }
 
+/* Define margins and size of logo */
 #logo-holder img {
     object-fit: contain;
     height: var(--logo-height);
@@ -36,9 +39,13 @@
     text-align: right;
     margin-top: var(--app-margin-3);
     color: var(--icon-dark-color);
-    font-size: var(--icon-size-standard);
+    font-size: calc(
+        var(--sidebar-small-width) / 3
+    );
     transition: all 0.2s;
-    margin-right: var(--app-margin-3);
+    margin-right: calc(
+        var(--sidebar-small-width) / 3
+    )
 }
 
 
@@ -61,7 +68,10 @@
     margin-right: var(--app-margin-3)!important
 }
 
+
 .sidebar-icon-holder {
+    /* Width is calculated to have equal margin from left and right. This calculation _will not work_ if the icon width is
+    more than 3x the total sidebar width */
     width: calc(
         var(--sidebar-small-width) / 3
     );
